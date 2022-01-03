@@ -26,7 +26,7 @@ void	send_null(pid_t pid)
 	while (byte--)
 	{
 		kill(pid, SIGUSR2);
-		usleep(800);
+		usleep(500);
 	}
 }
 
@@ -51,7 +51,7 @@ int	main(int argc, char *argv[])
 				kill(pid, SIGUSR1);
 			else
 				kill(pid, SIGUSR2);
-			usleep(800);
+			usleep(500);
 		}
 		i++;
 	}
