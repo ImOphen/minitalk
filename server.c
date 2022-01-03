@@ -41,11 +41,11 @@ void	signal_handler(int sig, siginfo_t *info, void *(v))
 int	main(void)
 {
 	pid_t				pid;
-	int					i;
+	int					b;
 	struct sigaction	signals;
 
+	b = 0;
 	signals.sa_sigaction = &signal_handler;
-	i = 0;
 	pid = getpid();
 	ft_printf("My Process ID is : %d\n", pid);
 	sigaction(SIGUSR1, &signals, NULL);
